@@ -1,12 +1,12 @@
 import { FC } from 'react';
+import './style.css';
 import {
   calculateCalibrationValues,
   calculateCalibrationValuesGolden,
 } from './1';
-
-import './style.css';
 import {calculateGameIdsSum, calculateNumbersOfFewestCubes} from "./2";
 import {calculateGearRatio, calculateGearRatioGolden} from "./3";
+import {winningScratchcardsGolden, winningScratchcards} from "./4";
 
 export const App: FC<{ name: string }> = ({ name }) => {
   return (
@@ -21,6 +21,9 @@ export const App: FC<{ name: string }> = ({ name }) => {
         <h2>Day 3</h2>
         <p>⭐ {calculateGearRatio()}</p>
         <p>🌟 {calculateGearRatioGolden()}</p>
+        <h2>Day 4</h2>
+        <p>⭐ {winningScratchcards()}</p>
+        <p>🌟 {winningScratchcardsGolden()}</p>
       </div>
   );
 };
